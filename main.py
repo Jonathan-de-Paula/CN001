@@ -23,6 +23,9 @@ while True :
         if a >= b:
             print("O limite inferior deve ser menor que o superior.")
             continue
+        if fun_sym.has(smp.log) and (a <= 0 or b <= 0):
+            print("Erro: ln(0) é indefinido. Não é possível usar a=0 com f(x)=ln(x).")
+            continue
         if f(a) * f(b) >= 0:
             print("Não há raizes no intervalo")
             continue
@@ -58,4 +61,5 @@ while True :
 
     else:
         print("Opção inválida.")
+        continue
         continue
